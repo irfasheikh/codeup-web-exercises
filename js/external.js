@@ -53,7 +53,9 @@ alert("Are you able to enrool? " + (ClassSize && ClassConflict))
 //shopping//
 
 var product = confirm("Are you buying more than two items?")
+var offer = confirm("Is the offer still valid?")
 var premium = confirm("Are you a premium member?")
+var canUserUseOffer = (product || premium) && offer
 
-alert("Do you qualify for the discount?" + (product || premium));
+alert("You can use this offer is a " + canUserUseOffer + " statement."
 
