@@ -160,7 +160,7 @@ function calculateTotal(luckyNumber, subTotal)
 }
 
 
-
+console.log(calculateTotal(4,100));
 
 
 
@@ -176,7 +176,7 @@ function calculateTotal(luckyNumber, subTotal)
 
 var promptTotal = prompt("What is your total?")
 
-alert(calculateTotal(promptTotal))
+alert(calculateTotal(luckyNumber,promptTotal))
 
 
 
@@ -198,3 +198,23 @@ alert(calculateTotal(promptTotal))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var enterNumber = confirm("Would you like to enter a number?")
+
+if (enterNumber === false)
+{
+    alert("You didn't pick a number, loser!")
+    console.log("You didn't pick a number.")
+}
+else if (enterNumber === true)
+{
+    prompt("This the number even or odd?")
+}
+else if (enterNumber === true)
+{
+    [prompt("What is your number plus 100?")]
+}
+else if (enterNumber ===true)
+{
+    prompt("Is the number positive or negative?");
+}
