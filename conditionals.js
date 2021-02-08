@@ -20,7 +20,7 @@
  * console.logging the function's return value
  */
 
-var color = "red"
+
 
     function analyzeColor(color){
     if(color === "blue") {
@@ -87,6 +87,8 @@ console.log(SwitchColor("orange"))
  * function to show it to the user.
  */
 
+
+
 var promptColor = prompt("What is your favorite color?")
  alert(analyzeColor(promptColor))
 // this is another way to do it//
@@ -122,7 +124,45 @@ var promptColor = prompt("What is your favorite color?")
  *
  * Test your function by passing it various values and checking for the expected
  * return value.
- */
+ *
+ * you need a function that takes in a number
+ * 1) deal with non 0-5 numbers
+ * 2)
+ * //
+ * */
+function calculateTotal(luckyNumber, subTotal)
+{
+        var discount = 0;
+
+        if(luckyNumber ===1)
+        {
+          discount = .1;
+        }
+        else if(luckyNumber===2)
+        {
+            discount = .25;
+        }
+        else if(luckyNumber===3)
+        {
+            discount = .35;
+        }
+        else if(luckyNumber===4)
+         {
+            discount = .50;
+         }
+        else if(luckyNumber===5)
+        {
+            discount = 1.0;
+        }
+        var total = subTotal-(discount*subTotal);
+
+        return total;
+}
+
+
+
+
+
 
 /**
  * TODO:
@@ -131,8 +171,16 @@ var promptColor = prompt("What is your favorite color?")
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ //Generate a random number between 0 and 6
+ var luckyNumber = Math.floor(Math.random() * 6);
+
+var promptTotal = prompt("What is your total?")
+
+alert(calculateTotal(promptTotal))
+
+
+
+
 
 /**
  * TODO:
