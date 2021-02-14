@@ -1,3 +1,4 @@
+
 //1.
 function isBoolean(input)
 {
@@ -62,4 +63,21 @@ function upperCase(input){
     }else {
         return false;
     }
+}
+
+
+//if parameter is = 25 return false
+
+function SergioIs(annoying)
+{
+    if (annoying === 25)
+        return false
+    else return true
+}
+
+// function concat 2 strings
+
+function togather(x,y)
+{
+    return x + y
 }

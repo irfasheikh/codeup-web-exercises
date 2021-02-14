@@ -5,7 +5,7 @@
 //while(!areWeThereYet) // this condition runs our while loop, when you click cancel, its false and will keep diong it. when you click
 //ok it will stop and go away
 //{
-  //  areWeThereYet = confirm("Are we there yet?") //going to be true or false written as ok or cancel
+//  areWeThereYet = confirm("Are we there yet?") //going to be true or false written as ok or cancel
 //}
 
 /* var haveToy = confirm("Can I have the toy please?") // it will be stuck until you click ok *true* persistent kid
@@ -121,16 +121,102 @@ function whileLoopMultipleByTwoUntilGreaterThan100(num){
 
  */
 
-function sayHelloXTimes(num)
-{
-    for (num; num >=0; num--){
-        if (num % 5 === 0) {
-            console.log("Howdy! Currently num is: " + num);
-        } else {
-            console.log("Hello!");
-        }
+//function sayHelloXTimes(num)
+//{
+//  for (num; num >=0; num--){
+//    if (num % 5 === 0) {
+//      console.log("Howdy! Currently num is: " + num);
+//} else {
+//  console.log("Hello!");
+//}
+//}
+//say "Hello!"
+//}
+
+//sayHelloXTimes(num:25)
+
+
+//Three loops: doWhile/ while/ for loop
+
+//what can we do- make an example utilizing the three inan interesting example
+
+//CODEUP CAFE/ ONLY THING WE SERVE CODEUP CURRY
+
+
+//three areas of restaurant
+
+//i. roder some food [do/while loop] <asking how many entrees>
+//ii. back of the house - prep of food [while loop] <processthing those entrees>
+//iii. how did we do? how many orders did we have? [for loop] <tabulate the total num of entrees>
+
+
+// put the pieces that you need //
+function codeupCafe(){
+    var entrees = ""
+    var orderingFood;
+
+do {
+    var orderingFood = true;
+    var entrees = parseInt(prompt("How many codeup curry orders did you want?")) // parse bc we want whole #
+
+    if (entrees <= 0 || isNaN(entrees)) {
+        alert("Hey you need to order at least one plate of food!")
+    }// this statemebt is to catch an improper order
+     //need a way to stop ordering food so
+    else {
+        orderingFood = false;
+        alert("Alright, we'll get your " + entrees + " orders of curry going in our back kitchen!")
     }
-    //say "Hello!"
+    // execute some stuff at least once
+} while (orderingFood) // condition check the condition and see if i need to come back up and do again
+
+
+//while loop = set up the structure to PROCESS this many entrees, while we have food to make we're gonna keep making it
+//theres still orders cuz more than 0
+while (entrees > 0) {
+    // do some stuff we got curry to make
+    alert("We still have some orders to get out!");
+
+    var orderUp = confirm("Did you get that plate up? Is this entree ready to serve?")
+
+
+    //start decrementing-- if order is up, then take one away otherwise nothing to entrees needed to be made
+    if (orderUp) {
+        entrees--;
+        alert("Yeah! Let's see if we have another ticket left!!")
+    } else {
+        alert("Alright - let's get this moving, we've got " + entrees + " tickets left!!")
+    }
 }
 
-sayHelloXTimes(num:25)
+alert("Phew! That was a lot of orders, but we did a great job getting those out!! Hi5s~");
+
+
+// for loop = set up the structure to SHOW AMOUNT of entrees [mgr in the office counting num of entrees] for are good for when you want to run loop a specific amt of times
+
+// entrees = a num to use
+for (entrees; entrees > 0; entrees--) {
+    console.log(entrees)
+    alert("Entering ticket into Google Sheets - "
+    entrees + " left to enter into our spreadsheet!"
+)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
