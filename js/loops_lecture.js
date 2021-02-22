@@ -196,10 +196,9 @@ alert("Phew! That was a lot of orders, but we did a great job getting those out!
 
 // entrees = a num to use
 for (entrees; entrees > 0; entrees--) {
-    console.log(entrees)
-    alert("Entering ticket into Google Sheets - "
-    entrees + " left to enter into our spreadsheet!"
-)
+    console.log(entrees);
+    alert(`Entering ticket into Google Sheets - `
+    entrees + " left to enter into our spreadsheet!")
 }
 
 
