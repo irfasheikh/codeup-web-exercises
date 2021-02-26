@@ -16,7 +16,12 @@
         firstName: "Irfa",
         lastName: "Sheikh"
     }
+// var person = {};
 
+    // var person = new Object();
+
+    //person.firstName = "Iffy";
+    //person.lastName = "Sheikh"
 
     console.log(person)
 
@@ -30,13 +35,23 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function (){
-        alert("Hello from " + person["firstName"] + " " + person["lastName"] +"!")
-    };
+    person.sayHello = function () {
+        //alert("Hello from " + person["firstName"] + " " + person["lastName"] +"!")
+        //};
 
-    person.sayHello();
+        //person.sayHello();
 
-console.log(person.sayHello())
+//console.log(person.sayHello())
+        var sayGreeting = function () {
+            return "Hello from " + this.firstName + " " + this.lastName + "!"
+        }
+    }
+    person.sayHello = function () {
+        return "Hello from " + this.firstName + " " + this.lastName + "!"
+    }
+
+    console.log(person.sayHello())
+    //this word is good when working with multiple objects at once
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -72,11 +87,15 @@ console.log(person.sayHello())
 
      shoppers.forEach(function(shopper ){
          if(shopper.amount > 200) {
-             console.log("Hey " + shopper.name + "!" + " Your total before discount is " + shopper.amount+ " and your discount after the total is " + (shopper.amount- (shopper.amount * .12)))
+             var discount = shopper.amount * .12;
+             var newAmount = shopper.amount - discount;
+             console.log("Hey " + shopper.name + "!" + " Your total before discount is $" + shopper.amount+ " and your discount after the discount is $" + newAmount + "!");
          } else {
-             console.log("Hey " + shopper.name + "!" + " Your total is " + shopper.amount + " ")
+             console.log("Hey " + shopper.name + "!" + " Your total is $" + shopper.amount + " unfortunately, your total does not meet the minimum discount requirement.")
          }
      })
+
+
 
 
 
@@ -93,6 +112,25 @@ console.log(person.sayHello())
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {title: "Three Cups of Tea",
+            author: {
+            firstName: "Greg",
+                lastName:"Mortenson"}
+        {title: "Is Everyone Hanging Out Without Me",
+            author: {
+            firstName: "Mindy"
+            }, author.lastName:"Kahling"},
+        {title: "The Hunger Games", author.firstName:"Suzanne", author.lastName: "Collins"},
+        {title: " The Subtle Art of Not Giving a Fuck", author.firstName:"Mark", author.lastName: "Manson"},
+        {title: "Why Not Me?", author.firstName: "Mindy", author.lastName: "Kahling"}
+    ]
+console.log(books[0].title)
+console.log(books[0].author.firstName)
+
+
+
 
     /**
      * TODO:
@@ -118,6 +156,16 @@ console.log(person.sayHello())
      *      ---
      *      ...
      */
+books.forEach(function (book, index){
+    console.log("Book # " + (index +1));
+    console.log("Title:" + book.title);
+    console.log("Author:" + book.author.firstName + " " + book.author.lastName);
+    console.log("---");
+})
+
+
+
+
 
     /**
      * Bonus:
