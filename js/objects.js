@@ -178,4 +178,32 @@ books.forEach(function (book, index){
      *   `showBookInfo` function.
      */
 
+
+function createBook(bookTitle, authorFirstName, authorLastName){
+    var newbook = {
+        title: bookTitle,
+        author: {
+            firstName: authorFirstName,
+            lastName: authorLastName
+
+        }
+    }
+    return newBook;
+    }
+
+
+
+
+
+
+
+    console.log(createBook(bookTitle:"Three Cups of Tea", authorFirstName: "Greg", "Morteson"))
+    //3 strings, each string based on 3 parameters
+
+
+
+
+
+
+
 })();
