@@ -7,13 +7,13 @@
 <body>
 <form action ="https://request-inspector.glitch.me">
 
-    <label Email >
+    <label> Email </label>
     <input type="text" name="email" placeholder="Enter email address">
-    </label>
+
 
     <br>
 
-    <label Password >
+    <label> Password </label>
     <input type="password" name="password" placeholder="password">
     </label>
 
@@ -22,15 +22,26 @@
     <br>
 
 
-
+    <label> Tell us about yourself!</label>
+    <br>
     <textarea name="bio" placeholder="Put your bio here."></textarea>
 <br>
-    <label></label>
+    <label> How did you hear about us?</label>
+    <br>
     billboard <input type="radio" name="hear" value="billboard"><br>
     radio advertisement <input type="radio" name="hear" value="radio adv"><br>
     internet advertisement <input type="radio" name="hear" value="internet adv"><br>
     other <input type="radio" name="hear" value="other"><br>
+<br>
+    <label for="browser"> Which web browser do you use? </label>
+    <select id="browser" name="browser_use">
+        <option value="Chrome">Chrome</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Safari"> Safari</option>
+        <option disabled value="IE">Internet Explorer</option>
+    </select>
 
+    <input type="submit">
 </form>
 
 
