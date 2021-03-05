@@ -5,34 +5,60 @@
     <title>Register with Us</title>
 </head>
 <body>
-<form action ="https://request-inspector.glitch.me">
+<form method="POST" action="https://request-inspector.glitch.me/">
 
     <label> Email </label>
-    <input type="text" name="email" placeholder="Enter email address">
+    <input type="text" name="email" placeholder="hello@hello.com">
 
 
     <br>
 
-    <label> Password </label>
+
+    <label for="password"> Password </label>
     <input type="password" name="password" placeholder="password">
     </label>
 
 
-    <input type="hidden" value="HiddenValue">
+    <input id="password" type="hidden" value="HiddenValue">
+
     <br>
 
 
-    <label> Tell us about yourself!</label>
+    <label for="bio" >Bio</label>
+
+
     <br>
-    <textarea name="bio" placeholder="Put your bio here."></textarea>
+
+
+    <textarea name="bio" id="bio" cols="30" rows= "10" placeholder="Tell us about yourself!"></textarea>
+
+
+
 <br>
+
+
+
     <label> How did you hear about us?</label>
+
+
     <br>
-    billboard <input type="radio" name="hear" value="billboard"><br>
-    radio advertisement <input type="radio" name="hear" value="radio adv"><br>
-    internet advertisement <input type="radio" name="hear" value="internet adv"><br>
-    other <input type="radio" name="hear" value="other"><br>
+
+
+    <input type="radio" name="hear" value="billboard"> billboard
+    <br>
+     <input type="radio" name="hear" value="radio adv"> radio advertisement
+    <br>
+     <input type="radio" name="hear" value="internet adv"> internet advertisement
+    <br>
+    <input type="radio" name="hear" value="other"> other
+    <br>
+
+
+
 <br>
+
+
+
     <label for="browser"> Which web browser do you use? </label>
     <select id="browser" name="browser_use">
         <option value="Chrome">Chrome</option>
@@ -41,7 +67,12 @@
         <option disabled value="IE">Internet Explorer</option>
     </select>
 
-    <input type="submit">
+    <input type="submit" value="Register Now">
+
+
+
+
+
 </form>
 
 
