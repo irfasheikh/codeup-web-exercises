@@ -19,12 +19,12 @@
 }
 
 /* selector for all elements with class="article" */
-#container article{
+.article{
     clear:both;
 }
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
-#container article>a {
+ article>a {
     float:right;
 }

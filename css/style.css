@@ -1,3 +1,42 @@
-h1 {text-align: center}
+body {
+    background-image: url("codeup-web-exercises/images/welcome-pic.jpeg");
+    background-color: teal;
+    font-family: 'Bad Script', cursive;
+}
 
-header.{color: coral;
+
+header {text-align: center;
+
+    color: coral;
+    text-decoration:underline;
+}
+
+
+ul {
+    list-style: georgian;
+}
+
+table {
+    border: thin solid black;
+    border-collapse: collapse;
+    font-size: 1.2 em;
+}
+
+
+th, td {
+    border: thin dotted black;
+    padding: 8.5px;
+}
+
+a:link {
+    color: coral;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+a:hover {
+    background: aliceblue;
+    color: brown;
+}
