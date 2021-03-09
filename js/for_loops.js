@@ -1,6 +1,6 @@
 "use strict";
 
-function showMultiplicationTable() {
+/*function showMultiplicationTable() {
     for (var i = 1; i <= 10; i++) {
         var result = i * 7;
         console.log("7 * " + i + " = " + result);
@@ -45,8 +45,63 @@ for (var outerLoop = 1; outerLoop <= 9; outerLoop++ ){
  */
 
 //5.
-for (var i = 100; i >= 5; i=i- 5){
+/*for (var i = 100; i >= 5; i=i- 5){
     console.log(i)
 }
 
+
+ */
+//walkthrough//
+        //this will run every iteration
+        function showMultiplicationTable(num){
+            for (var i = 1 ; i <= 10; i++){
+                // this will run every iteration
+                console.log(num +" x "+ i +" = "+ (num * i));
+            }
+        }
+showMultiplicationTable(7)
+//function showMultiplicationTable(num){
+    //for ( var i = 1 ; i <= 10; i++){
+      //  //this will run every iteration
+
+   // }
+//}
+
+
+console.log(randomNumber)
+
+for (var i = 1; i <= 10; i++) {
+    var randomNumber = Math.floor(Math.random() * (181) + 20);
+    if (randomNumber % 2 === 0){
+        console.log("Your number " + randomNumber + " is even!");
+    }else{
+        console.log("Your number "+ randomNumber + " is even!");
+    }
+}
+
+for (var outerLoop = 1; outerLoop <= 9; outerLoop++){
+    var output = "";
+    for (var innerLoop=1; innerLoop <= outerLoop; innerLoop++){
+        output = output + outerLoop;
+    }
+    console.log(output);
+}
+
+
+
+//start at 100, go down to 5 and counting by 5.
+
+for (var i = 100; i>= 5; i -=5){
+    console.log(i)
+}
+
+//while loops//
+
+var number = 2;
+
+while(number <=65536){
+    console.log(number);
+    number=number*2;
+
+}
 
