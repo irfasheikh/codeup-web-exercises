@@ -5,56 +5,62 @@
     <title>Intro to HTML Exercise</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="auto-margins">
 
-<header>
-<a name = "top"</a>
-<h1> Welcome to Veridian Dynamics!</h1>
+<header id="top">
+
+<h1 class ="fancy-header" Welcome to Veridian Dynamics!</h1>
 
 <p> At Veridian Dynamics,<strong> we </strong> solve <strong>your</strong> problems with <em><strong> technology</strong></em>.
 </p>
 </header>
-<hr/>
+<main>
 
 
-<h2>Core Values </h2>
+<section id="core-values">
+    <h2> Core Values </h2>
 <ul>
     <li> Competence</li>
     <li> Invovlement</li>
     <li> Techonlogy </li>
 </ul>
+</section>
+<section id="our-process">
 <h2> Our Process</h2>
 <ol>
     <li>Plan</li>
     <li> Evaluate</li>
     <li> Implement</li>
 </ol>
-<h2> 2020 Vision</h2>
+</section>
+
+    <section id="2020">
+<h2> 20/20 Vision</h2>
 <ul>
     <li> Become #1 in Technology </li>
     <li> Increase Success by 20%</li>
     <li> Increase Business by 30% </li>
 </ul>
-
+    </section>
+<hr>
+    <section id="co-vision">
 <h2> Company Vision </h2>
 
 
-<table>
-        <tr>
-            <th><img src = "images/cat.jpeg" alt="Cat Yawn" width=380px height 350px> </th>
-            <th><img src ="images/oanda.jpeg" alt="Panda" width= 400px height 350px> </th>
-        </tr>
-        <tr>
-            <td><img src ="images/redpanda.jpeg" alt="Red Panda" width= 400px height 200px></td>
-            <td><img src="images/nature.jpeg" alt="Greenery" width=380 px height 400px> </td>
-        </tr>
-</table>
 
+            <img src = "images/cat.jpeg" alt="Cat Yawn" width=380px height 350px> </th>
+            <img src ="images/oanda.jpeg" alt="Panda" width= 400px height 350px> </th>
+     <br>
+            <img src ="images/redpanda.jpeg" alt="Red Panda" width= 400px height 200px></td>
+            <img src="images/nature.jpeg" alt="Greenery" width=380 px height 400px> </>
+
+</section>
+    <section id="our-product">
 
 
 <h2> Our Product</h2>
 <main>
-<table>
+<table class ="auto-margins">
     <tr>
         <th> Plan</th>
         <th> Price</th>
@@ -76,14 +82,23 @@
         <td> Unlimited Support</td>
     </tr>
 </table>
-<br>
-</br>
-<em> All products come with our quality guarantee &trade;</em>
-<br>
+    </section>
+    </main>
 
+<footer>
+    <section>
+
+        <p>
+            <em> All products come with our quality guarantee &trade;</em>
+        </p>
+        <p>
+            <a href = "#top" >Go to the top of the page </a>
+        </p>
+    </section>
+</footer>
 </main>
 
-<a href = "#top" >Go to the top of the page </a>
+
 
 </body>
 </html>
