@@ -5,7 +5,7 @@ body {
     background-position: top left;
     background-repeat: no-repeat;
     font-family: 'Oswald', sans-serif;
-    text-aligh: center;
+
     width: 90%;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 header {
-   margin-top: 50px;
+   text-align:center;
     color: coral;
     text-decoration-line:underline;
 }
