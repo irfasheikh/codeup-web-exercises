@@ -25,11 +25,14 @@ header {
 a {
     color: var(--link-color);
 }
+
 .top-nav {
     background: var(--light-bg);
-    z-index: 1500;
-    display: inline-block;
+    position:fixed;
+    width: 100%;
+    z-index: 9001;
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
@@ -39,12 +42,21 @@ a {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
+
 }
 .nav-link:hover {
     color: var(--link-color);
 }
 
+.nav-item{
+    padding: 1.5em;
+    display:inline-block;
+    width: 100%;
+}
 
+.container {
+    padding: 2em;
+}
 
 .profile {
     background: var(--light-bg);
@@ -73,25 +85,66 @@ a {
     color: var(--main-link-color);
 }
 
-.nav-item{
-    padding: 1.5em;
-    display:in-line block;
-    width: 100%;
-}
+
 
 .profile-image{
     position: absolute;
-    float:right;
+    top:14.5em;
+}
+
+.profile-form {
+    float: right;
+    line-height: 80px;
 
 }
 
-.profile-form{
-    line-height:80px;
-
-.profile-form{
-    float: right;
-
 .profile-details{
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
+}
 
+.timeline {
+    width: calc(50% - 1em);
+    float: left;
+    margin: 0 0.5em;
+}
+
+.who-to-follow {
+    width: calc(25% - 1em);
+    float: left;
+    margin:0 0.5em;
+}
+
+.media {
+    width:100%;
+    background: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: 0.5em;
+    overflow: auto;
+}
+
+.media-image {
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+}
+
+.tex-muted {
+    color: var(--main-link-color)
+}
+
+.media-body {
+    float:left;
+    width:calc(100% - 50px);
+}
+
+.profile-items {
+    list-style: none;
+    padding: 0;
+
+}
+
+.profile-entry{
 
 }
