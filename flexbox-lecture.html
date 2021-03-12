@@ -16,13 +16,29 @@
             width: 100%;
             border: 3px solid goldenrod;
             display: flex;
-            flex-directoin: column-reverse;
+            flex-direction: column;
         }
         .flex-item {
             background: #BFD45D;
             border: 2px solid #F9EFD6;
             padding: 1em;
         }
+
+        .flex-container-baseline {
+            display:flex;
+            align-items: center;
+            border: 5px solid goldenrod;
+            height:400px;
+        }
+
+.flex-container-baseline2 {
+    display:flex;
+    align-times: baseline;
+    border: 5px solid goldenrod;
+    height: 400px;
+}
+
+
     </style>
 </head>
 <body>
@@ -32,6 +48,17 @@
     <div class="flex-item">Item 2</div>
     <div class="flex-item">Item 3</div>
 </div>
+
+<div> class= "flex-container-baseline" >
+    <div class="flex-item box1">first</div>
+    <div class="flex-item box2">second</div>
+    <div class="flex-item box3"> third</div>
+    <div class="flex-item box4">fourth</div>
+    <div class="flex-item box5">fifth</div>
+</div>
+
+
+
 
 </body>
 </html>
