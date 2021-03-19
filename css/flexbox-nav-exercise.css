@@ -1,4 +1,5 @@
 * {
+    /*this is the universal selector*/
     box-sizing: border-box;
 }
 body {
@@ -12,11 +13,11 @@ ul {
     padding: 0;
     margin: 0;
 }
-nav a {
-    text-decoration: none;
-    color: white;
-    font-family: Verdana;
+header nav a {
+  color: black;
 }
-nav a:hover {
-    background: black;
+
+header nav a:hover {
+    color: black;
 }
+
