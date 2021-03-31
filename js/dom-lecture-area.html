@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Lecture Area</title>
+</head>
+<body>
+    <button id="button1"> Let's see an event</button>
+    <button id="button2">Change some colors</button>
+    <button id="button3">Remove events</button>
+
+
+
+<script>
+    var buttonOne = document.getElementById( "button1");
+
+    console.log (buttonOne);
+
+    buttonOne.addEventListener("click", function () {
+        // what woud you like me to do when i detect this incoming click?
+        alert("This button-it has been clicked!")
+    })
+
+    //add an event listener to button2 (grab it and put it in a variable first
+
+    var buttonTwo = document.getElementById("button2");
+
+    buttonTwo.addEventListener("click", function(){
+        var paragraph= document
+        .getElementsByTagName("p");
+        paragraph[0].style.backgroundColor = "rebeccarepurple"
+    })
+
+    var buttonThree=documnet.getElementById("button3");
+
+    buttonThree.addEventListener("click", function(){
+        buttonOne.removeEventListener("click", function {
+            alert("This button - it has been clicked!")
+        })
+    })
+
+
+</script>
+</body>
+</html>
