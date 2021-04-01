@@ -63,6 +63,17 @@ var mainHeading = document.getElementById("main-header");
 
         // TODO: Set text color on every other list item to grey
 
+var listGrey = document.getElementsByTagName("li");
+
+var makeGray = function(){
+    for(var i=0; i < listItems.length; i++){
+        if (i % 2 !== 0) {
+            listItems[i].style.color = "grey";
+        } else }
+        }
+    }
+}
+
 
 
         // TODO: Set text color of li with dbid = 1 to blue
