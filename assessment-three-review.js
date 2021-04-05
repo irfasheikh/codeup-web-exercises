@@ -28,7 +28,7 @@ function totalPets (petsArray){
 // Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
 // totalPets([{name: 'Fernando Mendoza', numPets: 1},{name: 'Douglas Hirsh', numPets: 8}, {name: 'Kenneth Howell', numPets: 3}]) //11
 
-/*var petsArray = [{
+var petsArray = [{
     name: "Fernando Mendoza",
     numPets: 1
 },{
@@ -38,14 +38,24 @@ function totalPets (petsArray){
     name: "Kenneth Howell",
     numPets: 3
 }]
-our gameplan:
-    * write the function first
-* one parameter
-* deal with the array
-** extract what we need (RV) AND we probably need a LOOP [FD]
-*** need a loop? that's what a for loop is FOR!
-    *** extraction: extract each individual numPets in this loop
-** how about a BUCKET [a place to store our running sum]
+
+
+function totalPets (input) {
+
+
+
+var sum = 0;
+
+for (var i = 0; i <petsArray.length; i++){
+    sum = sum + petsArray[i].numPets;
+}
+return sum;
+}
+
+
+/*
+
+ */
 
 /*our function:
 function totalPets(petsArray){
@@ -65,8 +75,29 @@ function totalPets(petsArray){
 // countPosi([-2, 7, 4, -9, 1]) //3
 // countPosi([3, 6, 9, -1]) //3
 // countPosi([10]) //1
+
+
+
+
+
+ */
+var countPosi = [-2, 7, 4, -9, 1];
+
+function countPosi ()
+
+
+
+
+
+
+
+
+
+
+ */
+
 // Write a function named printRecipe that accepts a recipe object. A recipe object will have properties of title (a string), servings (a number), and ingredients (an array of strings). printRecipe will console.log each property in this format:
-    Example object:
+//    Example object:
 
 
 
