@@ -77,15 +77,40 @@ function totalPets(petsArray){
 // countPosi([10]) //1
 
 
-
-
-
  */
-var countPosi = [-2, 7, 4, -9, 1];
-
-function countPosi ()
 
 
+function countPosi(numbers) {
+    var totalPosNumbers = 0;
+
+    for( var i= 0; i < numbers.length; i++) {
+        if (numbers [i] > 0){
+            totalPosNumbers = totalPosNumbers + 1;
+        }
+    }
+    return totalPosNumbers;
+}
+
+console.log(countPosi ([-2, 7, 4, -9, 1]));
+
+
+
+//var countPosi = [-2, 7, 4, -9, 1];
+
+//function countPosi ()
+
+
+
+/*function countPositive(nums){
+    var totalPosNumbers = 0;
+    for(var i = 0; i < nums.length; i++){
+        if (nums[i] > 0){
+            totalPosNumbers = totalPosNumbers + 1;
+        }
+    }
+    return totalPosNumbers;
+}
+console.log(countPositive([-2, 7, 4, -9, 1]));
 
 
 
@@ -93,8 +118,6 @@ function countPosi ()
 
 
 
-
- */
 
 // Write a function named printRecipe that accepts a recipe object. A recipe object will have properties of title (a string), servings (a number), and ingredients (an array of strings). printRecipe will console.log each property in this format:
 //    Example object:
@@ -106,6 +129,15 @@ Expected look in console from running printRecipe(caldoRecipe):
 Caldo con Pollo
 Serves: 4
 Required ingredients: whole chicken, carrots, cabbage, potatoes, jalapeno, cilantro, salt, pepper, cumin, onion powder, garlic powder
+
+
+
+   */
+
+
+
+
+
 // Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
 // convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
 // convertAddressToObject('5408 Villa Nueva') // {streetNumber: '5408', streetName: 'Villa Nueva'}
