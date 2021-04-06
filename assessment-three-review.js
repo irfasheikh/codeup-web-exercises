@@ -120,11 +120,11 @@ console.log(countPositive([-2, 7, 4, -9, 1]));
 
 
 // Write a function named printRecipe that accepts a recipe object. A recipe object will have properties of title (a string), servings (a number), and ingredients (an array of strings). printRecipe will console.log each property in this format:
-//    Example object:
+ Example object:
 
 
 
-  /*  var caldoRecipe = {name: "Caldo con Pollo", servings: 4, ingredients: ["whole chicken", "carrots", "cabbage", "potatoes", "jalapeno", "cilantro", "salt", "pepper", "cumin", "onion powder", "garlic powder"]}
+   var caldoRecipe = {name: "Caldo con Pollo", servings: 4, ingredients: ["whole chicken", "carrots", "cabbage", "potatoes", "jalapeno", "cilantro", "salt", "pepper", "cumin", "onion powder", "garlic powder"]}
 Expected look in console from running printRecipe(caldoRecipe):
 Caldo con Pollo
 Serves: 4
@@ -134,8 +134,19 @@ Required ingredients: whole chicken, carrots, cabbage, potatoes, jalapeno, cilan
 
    */
 
+var biryaniRecipe = {
+    title: "Chicken biryani",
+    servings: "6",
+    ingredients: ["whole chicken", "tomato", "basmati rice", "biryani masala", "lemon juice"]
+}
 
+function printRecipe(object){
+    console.log(biryaniRecipe.title)
+    console.log("Serves" + biryaniRecipe.servings)
+    console.log("Required ingredients:" + biryaniRecipe.ingredients)
+}
 
+console.log(printRecipe(biryaniRecipe));
 
 
 // Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
