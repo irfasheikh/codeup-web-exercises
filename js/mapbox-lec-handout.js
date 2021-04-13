@@ -13,7 +13,7 @@
 
 //TODO: Set map to the San Antonio area using the coordinates [-98.4861, 29.4252]
 
- mapboxgl.accessToken = mapBoxToken;
+ mapboxgl.accessToken = mapboxToken;
 
 //var map = new mapboxgl.Map({
   //  container: 'map', // container ID
