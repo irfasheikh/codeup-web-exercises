@@ -11,7 +11,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!--Custom CSS -->
-    <title>Weather Map</title>
+    <title>Weather Map Project</title>
 </head>
 <body>
 <nav>
@@ -21,19 +21,22 @@
 
 
 <h2> Weather Forecast </h2>
-<h3>5 Day Forecast</h3>
-<div id="cards">
-    <article class="card">
+
+<div class="container m-0">
+    <article class=" w-25 flex-column border solid">
         <section>
-            <p id="date1"></p>
-            <p class="font-weight-bold" id="sa-temp1"></p>
-            <p class="font-weight-bold" id="description1"></p>
-            <p class="font-weight-bold" id="sa-humidity1"></p>
-            <p class="font-weight-bold" id="sa-wind1"></p>
-            <p class="font-weight-bold" id="sa-pressure1"></p>
+            <p id="date"></p>
+            <p class="temp"></p>
+            <p class="description"></p>
+            <p class="humidity"></p>
+            <p class="wind"></p>
+            <p class="pressure"></p>
         </section>
     </article>
 
+        <div id="forecast">
+            <div> Date, min/max, description, humidity, wind, pressure </div>
+</div>
 
 
 <!-- jQuery first, popper js, bootstrap js -->
@@ -50,18 +53,49 @@
 <script src="keys.js"></script>
 
 <script>
+
+
     $(document).ready(function(){
         "use strict"
+
+
+
  $.get("https://api.openweathermap.org/data/2.5/weather", {
      q:"Dallas, US",
      appid:OPEN_WEATHER_APPID,
-     units: "imperial"
+     units: "imperial",
+     exclude:"current, hourly, minutely, alerts"
  }) .done(function(results){
      var dalWeather = results.main;
      console.log(results);
      console.log(dalWeather);
-    // $('#dal-temp').html(dalWeather.temp + "degrees F / " + dalWeather.temp + "degrees F");
-   //  $('#')
+     $('.temp').html("Dallas Forecast Today: " + dalWeather.temp + "°F");
+     // do this for all the classes
+
+
+     $.get("https://api.openweathermap.org/data/2.5/onecall", {
+         appid:OPEN_WEATHER_APPID,
+         lat:29.423017,
+         long:-98.48527,
+         units: "imperial",
+         exclude:"curent, hourly, minutely, alerts"
+     }) .done(function(results){
+         console.log(results)
+         // var dalWeather = results.main;
+         // console.log(results);
+         // results.daily.forEach(function(day, index){
+         // console.log(day)
+         // $('#forecast').append('<div>' + day.dt + '</div>')
+
+
+
+
+
+         //Html = html + ‘<h4>’ ….
+         //ie: x= x+4 is the same as X+=4
+
+         // });
+     });
 
 
 
@@ -70,14 +104,12 @@
 
 
 
-
-
- })
+ });
 
 
 
 
-    })
+    });
 </script>
 
 
