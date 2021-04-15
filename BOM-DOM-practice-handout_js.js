@@ -1,6 +1,4 @@
-
 $(document).ready(function() {
-    "use strict"
 
 
 //TODO: When the #changeBoxSize button is clicked the box should double in size from what it was!
@@ -49,33 +47,69 @@ $(document).ready(function() {
 
 //TODO:When a user hits the "g" key, the background of the page should turn purple.
 
+//attempt1
 //$(document).on("keydown", function(e){
     //  var keyCode = e.keyCode;
     //switch(keyCode) {
     //  case 71:
 
+//attempt2 trying a diff way
     //$(this).css({"background": "purple"});
     //}
     //console.log(e.key);
     // keysPressed.push(event.key);
-    //  if(keysPressed == "g"){
+    //  if(keysPressed === 71){
     //  keysPressed.shift()
     //  }
 
-    $(document).keydown(function (e) {
-        if (e.which == 71) {
-            $(this).css('background-color', 'purple')
+
+    //attempt 3 trying another way
+    //  $(document).keypress(function (event) {
+    //  if (event.which === 71) {
+    // $(this).css('background-color',"purple");
+    //}
+    //});
+    //});
 
 
 //TODO: Every time the enter key is pressed, increment and display a counter that shows the total number of times the enter key has been pressed.
 
 
+    //$(document).keydown(function() {
+    //  var keysPressed = $(document).keydown(function (){});
+    ////  if(keysPressed === '13') {
+    // $('#counter').html(function() {
+    //   var $this= $(this),
+    //    count = $this.
+    // return +val + 1
+    //  });
+    //    }
+    // });
+//});
+
 
 //TODO:When someone types 1, 2, 3 in a row, show an alert that says "You get a 50% discount!".
 
 
+//     When someone types 1, 2, 3 in a row, show an alert that says "You get a 50% discount!".
 
 
-
-
+    var counter = 0;
+    var arr = [];
+    var solution = [49, 50, 51];
+    $(document).keyup(function (event) {
+        console.log(event.keyCode);
+        arr.push(event.keyCode)
+        if (event.keyCode === 71) {
+            $("body").css("background-color", "purple");
+        }
+        if (event.keyCode === 13) {
+            counter += 1;
+            console.log(counter);
+        }
+        if (arr.join(",") === solution.join(",")) {
+            alert("You get a 50% discount");
+        }
+    })
+});
 
