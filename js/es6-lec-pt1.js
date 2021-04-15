@@ -333,20 +333,20 @@ const addOneD = arg1 => arg1 + 1;
 //TODO Together: Refactor the following using ES6
 
 // old way
-// function sayHello(name) {
-// 	if (typeof name === 'undefined') {
-// 		name = 'World';
-// 	}
+function sayHello(name) {
+	if (typeof name === 'undefined') {
+		name = 'World';}
 //
-// 	return 'Hello, ' + name + '!';
-// }
+	return 'Hello, ' + name + '!';
+}
 
+let sayHello2 = (name = "World") => `Hello, ${name}!`
 
-
-
-
-// console.log(sayHello2());; // "Hello, World!"
-// console.log(sayHello2('codeup'));; // "Hello, codeup!"
+//when you have undfined, it goes to the default of world, unless you change to a different value it will say world
+console.log(sayHello2(undefined));
+console.log(sayHello2()); // "Hello, World!"
+ console.log(sayHello2('codeup')); // "Hello, codeup!"
+console.log(sayHello2("")); // "Hello, !" this is an empty string, empty strings are still a value so not undefined
 
 
 
@@ -354,13 +354,13 @@ const addOneD = arg1 => arg1 + 1;
 
 // TODO: Refactor the following function using arrow syntax, default function parameter values, and template strings.
 
-function helloCohort(greeting, cohort){
-    if(typeof greeting === "undefined"){
-        greeting = "Good Morning";
-    }
-    if(typeof cohort === "undefined"){
-        cohort = "Marco";
-    }
+//function helloCohort(greeting, cohort){
+  //  if(typeof greeting === "undefined"){
+   //     greeting = "Good Morning";
+  //  }
+   // if(typeof cohort === "undefined"){
+      //  cohort = "Marco";
+  //  }
 
-    return greeting + " " + cohort;
-}
+   // return greeting + " " + cohort;
+//})
