@@ -115,6 +115,11 @@ let list = '<ul>';
 
 
 
+//const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
+//for (let day of days) {
+  //console.log(day);
+//}
 
 
 
@@ -129,4 +134,3 @@ for(let developer of developers) {
       list += '</ul>';
       
       document.body.innerHTML = list;
-      console.log(list);
