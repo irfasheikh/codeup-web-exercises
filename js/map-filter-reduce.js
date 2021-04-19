@@ -1,4 +1,4 @@
-                                               bnnnnnconst users = [
+                                                users = [
     {
         id: 1,
         name: 'ryan',
@@ -39,18 +39,23 @@
 
 //2.
 let triLang = users.filter(function(name){
-    return name.languages.length >= 3;
+    return user.languages.length >= 3;
 
 })
 console.log(triLang)
 
+
+
+
 //3.
 
 let List = users.map(function(input){
-    return users.email
+    return user.email
 })
 
 console.log(List)
+
+
 
 //4.
 //users is an object
@@ -59,6 +64,16 @@ let avg = users.reduce((total, user) => { //reduce returns a single number
 }, 0) // total starts at 0
 
 console.log(avg / users.length)
+
+ //another way make first let be total and then call this one avg
+
+ //let avg = totalYears / users.length;
+
+
+
+
+
+
 
 //5.
 
@@ -71,10 +86,23 @@ let longestEmail = users.reduce((longEmail, user ) => { //user is the singular o
 console.log(longestEmail)
 // loop inserts email after every loop
 
+// = users.reduce(function(longestEmail, user) {
+                                                //if (user.email.length > longestEmail.length){
+                                                //longestEmail = user.email
+                                                //}
+                                                //return longestEmail;
+                                                //}, "")
+
+
 //6.
 
-let singleNames = users.reduce((names, user) => {
+let usernameString = users.reduce((names, user) => {
     return names + (user.name + ", " )
 } , " Your instrcutors are: ")
 
-console. log(singleNames)
+console. log(usernameString)
+
+                                                // users.reduce(function(accumulator, user) {
+                                                //return '${accumulator} $ {user.name}';
+                                                //}, 'instructors are: ');
+                                                //console.log(usernameString);
