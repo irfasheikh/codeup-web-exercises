@@ -58,19 +58,23 @@
     $(document).ready(function(){
         "use strict"
 
+// GET REQUEST to OpenWeatherMap using city parameter
+        // https://openweathermap.org/current
 
 
  $.get("https://api.openweathermap.org/data/2.5/weather", {
      q:"Dallas, US",
      appid:OPEN_WEATHER_APPID,
      units: "imperial",
-     exclude:"current, hourly, minutely, alerts"
+     exclude:" hourly, minutely, alerts"
  }) .done(function(results){
      var dalWeather = results.main;
      console.log(results);
      console.log(dalWeather);
      $('.temp').html("Dallas Forecast Today: " + dalWeather.temp + "°F");
-     // do this for all the classes
+     // do this for all the classes --> date, temp, description, humidity, wind, pressure
+     $('.date').html("Date: " + dalWeather.date);
+
 
 
      $.get("https://api.openweathermap.org/data/2.5/onecall", {
@@ -78,7 +82,7 @@
          lat:29.423017,
          long:-98.48527,
          units: "imperial",
-         exclude:"curent, hourly, minutely, alerts"
+         exclude: "hourly, minutely, alerts"
      }) .done(function(results){
          console.log(results)
          // var dalWeather = results.main;
