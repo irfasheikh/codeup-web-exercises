@@ -29,12 +29,16 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        // var mainHeader = ;
 
+        var mainHeader = document.getElementById("main-header");
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-
+        var buttonOne = document.getElementById("btn1");
+        var changeHeader = function () {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+        buttonOne.addEventListener("click", changeHeader);
         // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = ;
+         var subHeader =var subHeader = document.getElementById("sub-header") ;
 
         // TODO: Set the text color of subHeader to blue
 
